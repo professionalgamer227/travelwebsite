@@ -1,0 +1,365 @@
+:root{
+    --color-one:#70D4FF;
+    --color-two:#6DBADB;
+    --color-three:#2DB7F3;
+    --color-four:#119CD8;
+    --color-five:#4C8198;
+}
+
+@keyframes materialize{
+    0%{
+        opacity: 0;
+    }
+
+    50%{
+        opacity: 0.5;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes shiftleft{
+    0%{
+        transform: translateX(-600rem);
+    }
+
+    100%{
+        transform: translateX(0rem);
+    }
+}
+
+/* "I might use this for something later in the website" - said I several months ago, never having used it to this day */
+/* @keyframes magnify{
+    0%{
+        transform: scale(1.00);
+    }
+
+    50%{
+        transform: scale(1.25);
+    }
+
+    100%{
+        transform: scale(1.50);
+    }
+} */
+
+html{
+    font-size: 62.5%;
+    padding: 0;
+    margin: auto;
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: var(--color-one);
+    overflow-x: hidden;
+}
+
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li{
+    display: inline;
+    text-align: right;
+    float: right;
+    z-index: 69000000; /* hehe funny number hoho*/
+    background-color: white;
+}
+
+.navigation a{
+    text-decoration: none;
+    font-size: 5rem;
+    margin-left: 6rem;
+}
+
+.headContainer{
+	width: 100%;
+	height: 100vh;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    background: url(img/background.jpg) no-repeat;
+    background-size: cover;
+    background-color: var(--color-one);
+    z-index: -69000; /*ohohoho funny name */
+    -webkit-clip-path: polygon(5% 0, 100% 0%, 95% 100%, 0% 100%);
+    clip-path: polygon(5% 0, 100% 0%, 95% 100%, 0% 100%);
+}
+
+.cometo{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 7.5rem;
+    text-align: center;
+    margin: auto;
+    padding: 1rem;
+    animation: materialize;
+    animation-duration: 2s;
+    animation-timing-function: shiftleft;
+}
+
+.cometoP{
+    margin: 0 auto;
+    margin-top: 7.5rem;
+}
+
+.kazakhstan{
+    font-family: 'Raleway', sans-serif;
+    font-size: 15rem;
+    text-align: center;
+    animation: shiftleft;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+}
+
+.kazakhstanP{
+    margin-bottom: 0;
+}
+
+.button1{
+    background-color: var(--color-two);
+    border-radius: 20%;
+    border: none;
+    display: block;
+    text-align: center;
+    font-size: 2rem;
+    margin: auto;
+    padding: 0;
+    margin-top: 7rem;
+    border: 0.1rem solid gray;
+}
+
+.button1Text{
+    text-decoration: none;
+}
+
+.content2{
+    width: 100%;
+	height: 100vh;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    background-color: var(--color-one);
+}
+
+.content2Header{
+    text-align: center;
+    font-size: 9rem;
+    font-family: 'Open Sans', sans-serif;
+    padding-top: 1rem;
+}
+
+.flexContainer{
+    display: flex;
+    justify-content: space-around;
+}
+
+.flexImage{
+    height: 30rem;
+    width: 30rem;
+    border-radius: 2.5rem;
+    transition: 1s;
+}
+
+.flexText{
+    text-align: center;
+    opacity: 0;
+    position: relative;
+    bottom: 11rem;
+    transition: 1s;
+    font-family: 'Raleway', sans-serif;
+    color: white;
+    text-shadow: .1rem .1rem #5045459f;
+}
+
+.flexItem:hover .flexText{
+    opacity: 1;
+    transform: scale(5);
+    animation-timing-function: ease-out;
+}
+
+.flexItem:hover .flexImage{
+    transform: scale(1.5);
+}
+
+.cardsContainer{
+    display: block;
+}
+
+.content3Header{
+    text-align: center;
+    font-size: 9rem;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.cardfilter{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    margin-bottom: 12rem;
+}
+
+.card{
+    perspective: 150rem;
+    position: relative;
+    margin-top: 5rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cardside{
+    height: 40rem;
+    width: 30rem;
+    font-size: 1.5rem;
+    color: white;
+    backface-visibility: hidden;
+    box-shadow: 0 1.5rem 4rem rgba(0,0,0,1.5);
+    border-radius: 10%;
+}
+
+.card-side-front{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    transition: all 1s;
+}
+
+.card-side-back{
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    transform: rotateY(-180deg);
+    transition: all 1s;
+}
+
+.card:hover .card-side-front{
+    transform: rotateY(-180deg);
+}
+
+.card:hover .card-side-back{
+    transform: rotateY(-360deg);
+}
+
+.frontP{
+    text-align: center;
+    font-size: 5rem;
+    color: #badfee;
+    font-weight: bolder;
+    -webkit-text-stroke: 0.025rem black;
+    font-family: 'Raleway', sans-serif;
+}
+
+.backP{
+    text-align: center;
+    font-size: 3rem;
+    font-family: 'Raleway', sans-serif;
+}
+
+.front1{
+    background-image: url(img/kazimg4.jpg);
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.back1{
+    background-color: var(--color-two);
+    overflow: hidden;
+    background-size: cover;
+}
+
+.button2{
+    margin-left: 12rem;
+    background-color: var(--color-three);
+}
+
+.front2{
+    background-image: url(img/kazimg5.jpg);
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.back2{
+    background-color: var(--color-two);
+    overflow: hidden;
+    background-size: cover;
+}
+
+.button3{
+    margin-left: 12rem;
+    background-color: var(--color-three);
+}
+
+.front3{
+    background-image: url(img/kazimg6.jpg);
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.back3{
+    background-color: var(--color-two);
+    overflow: hidden;
+    background-size: cover;
+}
+
+.button4{
+    margin-left: 12rem;
+    background-color: var(--color-three);
+}
+
+.content4{
+    display: block;
+    background-color: var(--color-one);
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    margin: auto;
+    background-size: cover;
+}
+
+.content4Header{
+    text-align: center;
+    font-size: 9rem;
+    font-family: 'Open Sans', sans-serif;
+    padding-top: 1rem;
+}
+
+.reviewContainer{
+    display: flex;
+    justify-content: space-around;
+}
+
+.reviewPreview{
+    text-align: center;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    position: relative;
+    bottom: 12rem;
+    transition: 0.75s;
+}
+
+.reviewImage{
+    height: 20rem;
+    width: 20rem;
+    border-radius: 100%;
+    transition: 0.75s;
+}
+
+.reviewImage:hover{
+    transform: scale(1.25);
+    animation-timing-function: ease-out;
+}
+
+.reviewImage:hover .reviewPreview{
+    transform: scale(1.1);
+    animation-timing-function: ease-out;
+}
