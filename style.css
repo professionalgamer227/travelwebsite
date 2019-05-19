@@ -371,4 +371,16 @@ li{
     body{
         background-color: var(--color-two);
     }
+
+    li{
+        display: block;
+        text-align: left;
+        float: left;
+        background: azure; /*This sounds like a nice color*/
+    }
+
+    .headContainer{
+        width: 100vw;
+        clip-path: unset;
+    }
 }
