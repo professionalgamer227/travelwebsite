@@ -61,20 +61,23 @@ ul{
     list-style-type: none;
     margin: 0;
     padding: 0;
+    background-color: white;
+    position: fixed;
 }
 
 li{
     display: inline;
     text-align: right;
-    float: right;
+    float: right; /*The error says I don't need this but without it the navigation looks very bad. Why?*/
     z-index: 69000000; /* hehe funny number hoho*/
-    background-color: white;
+    background: white;
 }
 
 .navigation a{
+    font-size: 4rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
     text-decoration: none;
-    font-size: 5rem;
-    margin-left: 6rem;
 }
 
 .headContainer{
@@ -86,9 +89,9 @@ li{
     background: url(img/background.jpg) no-repeat;
     background-size: cover;
     background-color: var(--color-one);
-    z-index: -69000; /*ohohoho funny name */
-    -webkit-clip-path: polygon(5% 0, 100% 0%, 95% 100%, 0% 100%);
-    clip-path: polygon(5% 0, 100% 0%, 95% 100%, 0% 100%);
+    z-index: -69000; /*ohohoho funny number */
+    -webkit-clip-path: polygon(0 0, 100% 0%, 100% 90%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0%, 100% 90%, 0% 100%);
 }
 
 .cometo{
@@ -120,31 +123,26 @@ li{
     margin-bottom: 0;
 }
 
-.button1{
-    background-color: var(--color-two);
-    border-radius: 20%;
-    border: none;
-    display: block;
+.headButton{
     text-align: center;
-    font-size: 2rem;
-    margin: auto;
-    padding: 0;
-    margin-top: 7rem;
-    border: 0.1rem solid gray;
-}
-
-.button1Text{
+    background: gray;
+    padding: 1.5rem;
+    border-radius: 25%;
     text-decoration: none;
+    margin-left: 47%;
+    top: 40rem;
+    cursor: not-allowed;
 }
 
-.content2{
-    width: 100%;
+#content2{
+    width: 100vw;
 	height: 100vh;
     position: relative;
     margin: 0;
     padding: 0;
     background-size: cover;
     background-color: var(--color-one);
+    z-index: -69000;
 }
 
 .content2Header{
@@ -362,4 +360,15 @@ li{
 .reviewImage:hover .reviewPreview{
     transform: scale(1.1);
     animation-timing-function: ease-out;
+}
+
+@media only screen and (max-width:1081px){
+    html{
+        font-size: 75%;
+        padding: auto;
+    }
+
+    body{
+        background-color: var(--color-two);
+    }
 }
