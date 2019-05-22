@@ -71,6 +71,7 @@ li{
     float: right; /*The error says I don't need this but without it the navigation looks very bad. Why?*/
     z-index: 69000000; /* hehe funny number hoho*/
     background: white;
+	width: 100%;
 }
 
 .navigation a{
